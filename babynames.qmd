@@ -20,12 +20,12 @@ x |>
   ggplot(aes(x = year, y = sum_prop, fill = sex)) + 
   geom_area() + 
   scale_x_continuous(breaks = seq(1900, 2016, 4)) +
-  scale_y_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent, breaks = seq(0, 0.06, 0.005)) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5)) +
   labs(
     title = "U.S. Babies Receiving Names Ending in -i",
-    subtitle = "There is a greater proportion of female babies receiving names ending in -i.",
+    subtitle = "There is a greater proportion of female babies in the United States receiving \nnames ending in -i.",
     x = "Year",
     y = "Percentage of Babies with Names Ending in -i",
     fill = "Sex"
